@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nero Help me Sir!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">Republic of the Philippines</div>
+    <div class="header">DEPARTMENT OF LABOR AND EMPLOYMENT</div>
+    <div class="footer">Regional Office No.______</div>
+    <div class="container">
+        <div class="main-content">
+            <table boarder="1" width="100%" cellspacing="20px">
+                <tr>
+                    <td colspan="2">
+                        <h2>APPLICATION FOR REGISTRATION OF WORKER'S ASSOCIATION (WA's)</h2>
+                        <hr/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="left_p">
+                            <h3>Part I. INFORMATION ABOUT THE REPORTING ORGANIZATION</h3>
+                            To be accomplished by the applicant. Supply all required information. Misrepresentation
+                            , false statement or fraud in this application or any supporting document is a 
+                            ground for denial or cancellation of registration.</br>
+                        </div>
+                        <div class="right_p">
+                            <label>Date Acommplished (mm/dd/yyyy)</label>
+                            <input class="inputDate" type="date">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr/></td>
+                </tr>
+                <tr>
+                    <td width="70%" valign="top">
+                        <label>Name of Applicant Association</label><br/>
+                        <input class="myInput-right" type="text" name="name"/><br/>
+                        <label>Address</label><br/>
+                        <input class="myInput-right" type="text" name="name"/>    
+                    </td>
+                    <td valign="top">
+                        <div class="header">Contact Nos.</div>
+                        <label>E-Mail:</label><br/>
+                        <input class="myInput-left" type="text" name="name"/><br/>
+                        <label>Landline No:</label><br/>
+                        <input class="myInput-left" type="text" name="name"/><br/>
+                        <label>Mobile No:</label><br/>
+                        <input class="myInput-left" type="text" name="name"/><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr/></td>
+                </tr>
+                <tr>
+                    <td width="70%" valign="top">
+                        <label>Name of President</label><br/>
+                        <label>(First Name)</label> <label>(Middle Name)</label> <label>(Last Name)</label>
+                        <input class="myInput-right" type="text" name="name"/><br/>
+                        <label>Address</label><br/>
+                        <input class="myInput-right" type="text" name="name"/>    
+                        <label for="gender">Gender:</label><br/>
+                        <select id="gender" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                    <td valign="top">
+                        <div class="header">Contact Nos.</div>
+                        <label>E-Mail:</label><br/>
+                        <input class="myInput-left" type="text" name="name"/><br/>
+                        <label>Landline No:</label><br/>
+                        <input class="myInput-left" type="text" name="name"/><br/>
+                        <label>Mobile No:</label><br/>
+                        <input class="myInput-left" type="text" name="name"/><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr/></td>
+                </tr>
+                <tr>
+                    <td width="70%" valign="top">
+                        <label for="dateOrganized">Date Organized (mm/dd/yyyy):</label><br/>
+                        <input type="date" id="dateOrganized" name="dateOrganized">
+                    </td>
+                    <td valign="top">
+                        <label for="dateCBLRatification">Date of CBL Ratification (mm/dd/yyyy):</label><br/>
+                        <input type="date" id="dateCBLRatification" name="dateCBLRatification">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr/></td>
+                </tr>
+                <tr>
+                    <td width="70%" valign="top">
+                        <label>Place/s Operation</label><br/>
+                        <textarea class="textArea">Textarea here!!</textarea>
+                        <br/>
+                    </td>
+                    <td valign="top">
+                        <div class="header">Number. of Association Members </div>
+                        <label>Male</label><br/>
+                        <input class="myInput-left" type="number" id="maleCount" name="maleCount" min="0" oninput="calculateTotal()"/><br/>
+                        <label>Female</label><br/>
+                        <input class="myInput-left" type="number" id="femaleCount" name="femaleCount" min="0" oninput="calculateTotal()"/><br/>
+                        <label>Total</label><br/>
+                        <input class="myInput-left" type="number" id="totalCount" name="totalCount" readonly/><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr/></td>
+                </tr>
+                <tr>
+                    <td width="70%" valign="top">
+                        <label>Occupation of Members:</label><br/>
+                        <div class="occupation-checkboxes">
+                            <label><input type="checkbox" name="occupation[]" value="agricultural"> Agricultural Workers (Farmers)</label><br/>
+                            <label><input type="checkbox" name="occupation[]" value="fisherfolk"> Fisher folk</label><br/>
+                            <label><input type="checkbox" name="occupation[]" value="artisans"> Artisans</label><br/>
+                            <label><input type="checkbox" name="occupation[]" value="cottage"> Cottage</label><br/>
+                            <label><input type="checkbox" name="occupation[]" value="small_transport"> Small Transport Workers (Drivers: Jeepney, FX, Tricycle, Pedicab)</label><br/>
+                            <label><input type="checkbox" name="occupation[]" value="homebased"> Home-based / Homeworkers</label><br/>
+                            <label><input type="checkbox" name="occupation[]" value="construction"> Small Construction Workers</label><br/>
+                            <label><input type="checkbox" name="occupation[]" value="vendors"> Vendors (Market, Sidewalk, Ambulant)</label><br/>
+                            <label><input type="checkbox" name="occupation[]" value="miners"> Small-scale Miners</label><br/>
+                            <label><input type="checkbox" name="occupation[]" value="others"> Others/Own-Account (specify): <input type="text" name="otherOccupation"></label><br/>
+                        </div>    
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        <button type="submit" class="submit-button">Submit</button>
+    </div>
+</body>
+</html>
